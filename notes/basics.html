@@ -3,14 +3,34 @@
 <html>
     <head>
         <title>HTML Basics</title>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"> <!--You can also do hexidecimal by writing color #-->
+        <style> 
+            body{
+                background-color: blanchedalmond;
+                font-family: sans-serif;
+                color: rgb(182, 18, 214); 
+            }
+            .small{
+                font-size: 20px;
+                text-decoration: underline dotted orangered 50px;
+            } 
+            #first{
+                font-size: 1vw;
+                text-align: center;
+                border: outset 5px red;
+                border-radius: 10px;
+                background-color: rgba(37, 12, 148, 0.692);
+                box-shadow: 10px 5px 5px black;
+                
+            }
+        </style> <!--em adjusts to the size of the website, vw the more you icease the witdh of the website so does the tag and vh does the same but for height -->
     </head>
     <body>
         <h1>HTML Notes!</h1>
         <h2>Sub heading</h2>
-        <h6>Tiny header</h6>
+        <h6 style="small">Tiny header</h6>
         <p>this is for a paragraph</p>
-        <p>smmoosfdosfefe <strong>wfwdasdwe</strong>efgepf efggfd <br>efgsdgfgggge</br>fesas</p>
+        <p><spam id="first">smmoosfdosfefe </spam><strong>wfwdasdwe</strong>efgepf efggfd <br>efgsdgfgggge</br>fesas</p>
         <a href="https://spinning.fish" target = "_blank"> This is a link </a>
     </body>
 </html>
