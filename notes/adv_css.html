@@ -7,23 +7,56 @@
         <title>Advanced CSS</title>
         <link href="https://www.google.com/search?sca_esv=55588fd05011d482&rlz=1C1ONGR_enUS1186US1186&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeiAkWG4OlBE2zyCTMjPbGmPgfe_7ak8LUsonpWCvT6w6csnyTymMQ2XHqFKxVhyiTuzROK67muxAMQmr62rPBqm-Xh47vkhUPc6p-yVUVbzdRtlt9OuxVyiigjXbLiozqxRC37o8-d43LoTNwGRSPBnkki71497RH10SUOMNI9jlxt0ViQ&q=roland+library+of+ruina&sa=X&ved=2ahUKEwj5_rutgv-QAxX2JUQIHSmBKoIQtKgLegQIDxAB&biw=2560&bih=1253&dpr=1&safe=active&ssui=on#vhid=Cfsv6TuglpCKIM&vssid=mosaic"
         rel="stylesheet">
-        <link rel="stylesheet" href="styles.csss"
+        <link rel="stylesheet" href="style.css"/>
+        <script>
+            images=["https://libraryofruina.wiki.gg/images/thumb/NetzachCombatIdle.png/170px-NetzachCombatIdle.png?967654", "https://static.wikia.nocookie.net/library-of-ruina/images/0/09/ChesedCombatIdle.png/revision/latest/scale-to-width-down/250?cb=20240624065125" , "https://libraryofruina.wiki.gg/images/thumb/AngelaCombatIdle.png/183px-AngelaCombatIdle.png?5be39a"]
+            index=0
+            showing="none"
+            function show(){
+                if(showing == "none" ){
+                 document.getElementById("hidden").style.display ="block"
+                 showing="block"
+                 document.getElementById("button").innerHTML ="show less"
+                }else{
+                    document.getElementById("hidden").style.display ="none"
+                    showing = "none"
+                    document.getElementById("button").innerHTML ="show more"
+                }
+            }
+            function change(){
+                document.getElementById("roland1").src=images[index]
+                index += 1
+                if(index >= images.length){
+                    index=0
+                }
+            }
+
+            function color(){
+                document.getElementById("left").style.color = document.getElementById("choice").value
+            }
+
+            function basic(){
+                document.getElementById("left").style.color= "black"
+            }
+        </script>
         
 
             
-         <!--for flex you would want to just write display: flex-->
+        
     </head>
     <body>
-        <h1>Title</h1>
-        <button>click me</button>
+        <h1 onmouseenter={color()} onmouseout={basic()}>Title</h1>
+        <input type="color" id="choice"/>
+        <button id="button" onclick={show()}>show more</button>
         <div id="content-wrapper">
         <div id="left">
-            <p> Man this is just some text here efegedwfsafgmgeggegegegewgewgegewrghtjrrdgshtrgehhhrhhhrhhhhhthhhhhjjjjjtrstjsjrsrsjtsrjtrsjtrs  <br> fffegrsdfegrterwdffffffffffffgggggggtrdfg</br></p>
+            <div id="hidden">
+            <p> Man this is just some text here efegedwfsafgmgeggegegegewgewgegewrghtjrrdgshtrgehhhrhhhrhhhhhthhhhhjjjjjtrstjsjrsrsjtsrjtrsjtrs  <br> fffegrsdfegrterwdffffffffffffgggggggtrdfg</br></p></div>
             <p>herhgigirgigerheriheriihihgriheriheriiiherhirihihrijhijijhrijhhrijhrijhrijhrijrijijijhjhjhrhrjhrjjhrijrhijjriijrijrijjejijerjojrojeojrjojhjhohrojojhrojhrohrojhjrjhjoojhrjhjrjhjoojhojhojh</p>
         </div>
         <div id="right">
-            <img id="roland" src="https://static.wikitide.net/projectmoonwiki/thumb/8/8e/RolandBattleSprite.webp/170px-RolandBattleSprite.webp.png"/>
-            <img id="roland" src="https://media.tenor.com/gehfYtrwkGwAAAAe/roland-roland-library-of-ruina.png"/>
+            <img id="roland1" onmouseover={change()} src="https://static.wikitide.net/projectmoonwiki/thumb/8/8e/RolandBattleSprite.webp/170px-RolandBattleSprite.webp.png"/>
+            <img id="roland2" src="https://media.tenor.com/gehfYtrwkGwAAAAe/roland-roland-library-of-ruina.png"/>
 
         </div>
         </div>
