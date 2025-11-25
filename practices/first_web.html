@@ -28,13 +28,14 @@
                 font-family: "Germania One", system-ui;
                 font-weight: 400;
                 font-style: normal;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content:space-around;
+                display: grid;
+                grid-template: 1fr 1fr / 1fr 1fr;
+                gap: 50px;
             }
             #logo{
-                height: 50vh;
-                width: 50vw;
+                height: 100vh;
+                width: 25vw;
+                border: outset 0.25vw rgb(133, 196, 169);
             }
             img{
                 margin: 40px;
@@ -106,7 +107,7 @@
         <div id="everything">
         <div id="intro">
         <h1 id="intro">Strongest Key Pages in Library of Ruina</h1>
-        <img id="logo" src="https://www.4gamer.net/games/767/G076793/screenshot_3.jpg" alt="Library of Ruina logo"/>
+        <img id="logo" src="https://cdn.mobygames.com/covers/10374099-library-of-ruina-windows-apps-front-cover.jpg" alt="Library of Ruina logo"/>
         </div>
         
         <div id="intro2">
@@ -160,7 +161,7 @@
         </div>
         
         <div id="tips">
-        <h3>More Tips for builds!</h3>
+        <h2> More tips for builds!</h2>
         <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2889235752" target ="_blank">Library of Ruina Builds</a>
         </div>
         </div>
