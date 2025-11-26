@@ -114,12 +114,43 @@
                 align-items: center;
                 color: white;
                 border: outset 0.25vw white;
+                display: none;
                 
             }
             
 
         </style>
         <script>
+            redmist=["https://libraryofruina.wiki.gg/images/The-red-mist-combat-sprite-idle.png", "https://static.wikia.nocookie.net/library-of-ruina/images/f/f1/KaliCombatIdle.png/revision/latest?cb=20240605181246"]
+            xiao=["https://libraryofruina.wiki.gg/images/XiaoEGOCombatIdle.png", "https://libraryofruina.wiki.gg/images/XiaoCombatIdle.png"]
+            index=0
+            blacksilenceshow="none"
+            function show(){
+                if(blacksilenceshow == "none" ){
+                 document.getElementById("blacksilence").style.display ="block"
+                 blacksilenceshow="block"
+                 document.getElementById("button").innerHTML ="show less?"
+                }else{
+                 document.getElementById("blacksilence").style.display ="none"
+                 blacksilenceshow = "none"
+                 document.getElementById("button").innerHTML ="show more?"
+                }}
+            function egoswap1(){
+                document.getElementById("rmist").src=redmist[index]
+                index += 1
+                if(index >= redmist.length){
+                    index=0
+                }
+            
+            }
+            function egoswap2(){
+                document.getElementById("xiaoimage").src=xiao[index]
+                index += 1
+                if(index >= xiao.length){
+                    index=0
+                }
+            }
+            
         
         </script>
     </head>
@@ -149,24 +180,21 @@
         <h2>Red Mist Key Page</h2>
         <img src="https://libraryofruina.wiki.gg/images/TheRedMistIcon.png?3db556" alt="Red Mist's Reception Logo"/>
         <p>The Red Mist key page is obtainable by completing the reception of the Red Mist and can only be equipped by Gebura in the floor of Language. The reasons for this is that the Red Mist is what Gebura used to be in the past. The passives of this key page are Legendary, Retaliate, The Strongest and Speed III. The first passive, Legendary, makes it so only Gebura can equip the page and that a unique E.G.O becomes avaliable at emotion level 4 or above which is gained through the use of a special combat page of Manifest E.G.O. The second passive, Retaliate, makes it so Gebura always has a counter dice avaliable by giving her a strong counter dice at all times. The third passive, The Strongest, makes it so at every turn the dice with the lowest speed value will become a infinite speed dice or the maximum value. The fourth passive isn't anything note worthy because all it does is just give her a extra speed dice to use combat pages on at all times. Now the strength of this key page comes from her unique pages which are Great Split: Vertical, Great Split: Horizontal, Focus Spirit, Level Slash, Upstanding Slash, Spear and Onrush. Greater Split: Vertical and Horizontal I'll discuss at the same time, they are unique combat pages worth 5 and 6 light specifically, Greater Split: Vertical is a strong single dice that rolls 20-39 and has the unique effect on hit of destroying a combat page on another speed dice the person that got hit by it, Greater Split: Horizontal on the other hand rolls even higher as it rolls 28-42 along with being a Mass Attack page(A page that attacks all targets that rolled less than the value the mass attack rolled) but however can only be usuable when the Red Mist E.G.O is activated. To quickly discuss the unique E.G.O is that when activated will increase the roll of all dices by 2 but takes stagger damage when Gebura does less than 40 damage that turn and is lost when Gebura is staggered. Focus Spirit is a at first lackluster page having a 8-12 block dice then using a 5-7 blunt dice and costing 2 light to use this page, but this page makes Gebura gain 3 strength(boosts the rolls of all dice by how mujch strength is on user when gained for that turn) when the blunt dice hits. The next three combat pages have similar mechanics of rolling pretty high and only one specific type of combat dice(Level slash does slash damage, Spear does pierce damage and Upstanding Slash does Blunt damage) and they cost 2 light which may seem expensive at first however they all have the mechanic of lowering all copies of their respicative pages after dealing 8+ damage however Spear and Upstanding Slash of drawing one page while Level Slash restores one light as well when the 8+ damage threshold is met. Onrush is an interesting page as it only has a single strong slash dice rolling 14-26 for 3 light, however the dice will be reused on a random enemy if the enemy it had attacked beforehand had been staggered or killed. The Red Mist's page strength shows with how high her single target damage is along with her potential AOE damage, and how quick she's able to ramp up due to how her main pages who will use have special effects once dealing enough damage. Passives you may want to add to her page are specifically ones that boost power like Myo's Prowess which reads When using a Combat Page, all dice on the page gain Power against targets with slower Speed (+1 Power per 2 points of difference, up to 5) and or Grace of the Prescript which boosts the power of a random damage by 2.</p>
-        <img src="https://static.wikia.nocookie.net/library-of-ruina/images/f/f1/KaliCombatIdle.png/revision/latest?cb=20240605181246" alt="The Red Mist" />
-        <img src="https://libraryofruina.wiki.gg/images/The-red-mist-combat-sprite-idle.png" alt="The Red Mist Ego" />
-        </div>
+        <img id="rmist" onmouseenter={egoswap1()} src="https://static.wikia.nocookie.net/library-of-ruina/images/f/f1/KaliCombatIdle.png/revision/latest?cb=20240605181246" alt="The Red Mist" />
         
+        </div>
         <div id="nikolai">
         <h2>Nikolai's Page</h2>
         <img src="https://libraryofruina.wiki.gg/images/RCorpIcon.png?bf1234" alt="R Corp's Reception Logo"/> 
         <p>Nikolai's Page is obtainable through both receptions of R Corp, though after the second reception of R corp there are more combat pages avaliable. Nikolai's page is one of the best support pages to have. The page becomes more better and gets most of it's power through the status called Charge. Charge's whole thing is on some specific combat pages it either gives charge or uses a specific amount of charge. However, unlike most other charge key pages the R Corp pages are able to hold 20 charge at once rather than the normal 10. Nikolai;s passives include Speed III, Triple-R suit, The Commander and Finishing Touch. Now the first 2 passives I won't go into much detail because of how we already know what Speed III does and Triple-R suit only allows the character with the key page equipped to hold 20 charge at once. The commander is where the page's suport capabilities are shown as what it does is when the libarian has 11+ charge they give 1 strength and endurance(increases defensive dice's power by the stack on self) to all allies. Finishing Touch inflicts a special status called 'Mark" on the first enemy hit on the scene that lasts for this scene and next, but can only be on one target at a time and what it does is make the enemy take 50% more damage and stagger damage for when the status is on them when attacked. She only has one unique combat page which is Disposal which is only usuable at 20 charge and is a powerful 2 dice attack rolling 15-30 on first dice which also destroys all of the oppenents next dices on clash win but on clash lose doesn't use the second dice and then 10-20 on the second dice that on hit if the target has 'Mark' then increases the damage and stagger damage by the natural roll which both deals twice as much damage on enemies with half health along with lowering cost by 1 and adds a copy of it to the character's deck because of how normally when it is used it is also exhausted(the page is unable to be used until the next act). Some advice for using this key page is either making a deck that captializes on Nikolai's suppport capibilities using passives that allow you to draw a lot more cards than normal along with giving the character buffs when they use charge. However, if you want more offensive capibilities for the page it is advised using the page disposal and more R corp pages.</p>
         <img src="https://libraryofruina.wiki.gg/images/thumb/NikolaiCombatIdle.png/300px-NikolaiCombatIdle.png?18b1e7" alt="Nikolai"/>
         </div>
-        
         <div id="purpletear">
         <h2>The Purple Tear's Page</h2>
         <img src="https://libraryofruina.wiki.gg/images/ThePurpleTearIcon.png?7ea68a" alt="Purple Tear's Reception Logo"/>
         <p>The Purple Tear's page is obtainable through the reception of the Purple Tear. The Purple tear is arguably one of the greatest key pages you can ever obtain. The passives for this page are Speed III, Manipulator of Odds and Changing Stances. You already know Speed III so that will not be discussed, but Manipulator of Odds works by whenever a dice rolls a minimium value it will reroll that dice changing its value but while it is broken already it can only activate once per a dice. Changing Stance is one of the most broken passives ever as it makes it  so at the start of the reception the character with the page equipped takes either a slash, blunt, pierce or defensive stance which increases the power of all the dices of the corresponding stance by 2 as well as giving a unique effect(slash stance makes all attacks deal 50% extra HP damage, blunt makes all attacks deal 50% extra stagger damage, pierce makes all pages inflict double the status effects and defensive stance makes it so the character with the page equipped is immune to status effects), do note that you are able to change stances at the cost of some light and that every stance has their own deck you need to make. Overall the Purple tear can fit into a multitude of team comps and different floors so it is necessarily up to you to decide what role or build you want the Purple Tear to be. </p>
         <img src="https://libraryofruina.wiki.gg/images/IoriCombatIdle.png" alt="The Purple tear" />
         </div>
-       
         <div id="yan">
         <h2>Distorted Yan's Page</h2>
         <img src="https://libraryofruina.wiki.gg/images/YanIcon.png?c50c1b" alt="Distorted Yan's Reception logo"/>
@@ -177,17 +205,15 @@
         <h2>Xiao's Page</h2>
         <img src="https://libraryofruina.wiki.gg/images/XiaoIcon.png?35e548" alt="Xiao's Reception Logo"/>
         <p>Xiao's Page is obtained through the reception of Xiao. This key page is one of the best burn based pages along with a great offensive page. The passives of this page are Speed III, Fervor, Force of a Wildfire and Nine Children of the Dragons. Fervor is a simple buff as it gives the character with the page equipped +1 power to all dices. Force of a Wildfire makes it so whenever the character does melee damage they inflict 1 burn(burn does damage by the end of the scene by the amount) and the status of 'Force of a Wildfire' which makes it when the unit that had the status gets staggered they inflict burn to all of their allies based on half of how much burn they had and is rounded down. Nine Children of the Dragons is the most interesting passive she has as it makes it so at emotion level the character with the page equipped manifests E.G.O. which at first only increases the power of all dices by 1 and gives her access to multiple mass attacks and at emotion level 4+ makes it so at the start of every scene every enemy is inflicted with 2 burn. Xiao's page is almost as flexible as The Purple Tear's page but of course prioritizes the infliction of burn so it is advised to run multiple burn combat pages and burn related passives for this key page.</p>
-        <img src="https://libraryofruina.wiki.gg/images/XiaoCombatIdle.png" alt="Xiao" />
-        <img  src="https://libraryofruina.wiki.gg/images/XiaoEGOCombatIdle.png" alt="Xiao's E.G.O."/>
+        <img id="xiaoimage" onmouseenter={egoswap2()} src="https://libraryofruina.wiki.gg/images/XiaoCombatIdle.png" alt="Xiao" />
         </div>
-        <button id="button">Show more?</button>
+        <button id="button" onclick={show()}>Show more?</button>
         <div id="blacksilence">
         <h2> Black Silence Key Page</h2>
         <img src="https://libraryofruina.wiki.gg/images/BlackSilenceIcon.png?6b898d" alt="Black silence reception logo "/>
-        <p>The Black Silence's Key Page is obtained at the end of the game during the fifth to last reception or the final reception of the Hana Association. The Key page can only be equipped on Roland on the first floor you ever unlock aka the Keter floor/floor of general works. This page is comparable to the Red Mist page in terms of how good it is. The passives of this page are Speed III, Orlando, and The Black silence. Orlando permantely makes sure Roland always has the page equipped no matter what along with his unique combat pages that cannot be swapped out. The Black Silence makes it so at the start of an act he draws two additional pages along with making it so the third page he uses will have all the dices on it gain +2 power. While the passives aren't much the real good part of this page comes from the unique combat pages. The unique pages are Ranga Workshop, Zelkova Workshop, Old Boys Workshop, Allas Workshop, Mook Workshop, Wheels Industry, Crystal Atelier, ATelier Logic, Durandal and lastly Furioso. The low cost pages are Zelkova Workshop, Old Boys Workshop, and Ranga Workshop which cost 0, 1 and 0 respicatively. Zelkova workshop has 2 dices that roll a 4-8 slash dice and a 3-8 blunt dice, the effects of this page are that on use Roland draws 1 page along with the passive effect of not allowing this page's cost to be changed. Old Boys Workshop restores 3 light on use and has 2 dices with a 5-9 Block dice and then a 4-8 blunt dice that on hit restores 5 stagger resist. Ranga Workshop shares the same effect as Zelkova workshp of not allowing the cost to be changed but instead the page has 3 dices all rolling a 3-7 with the first and second dice being pierce while the last one is a slash dice and inflicts 5 bleed(does damage based on bleed stack whenever a dice is rolled and then lessens the stack by a third when it triggers) next scene.  </p>
+        <p>The Black Silence's Key Page is obtained at the end of the game during the fifth to last reception or the final reception of the Hana Association. The Key page can only be equipped on Roland on the first floor you ever unlock aka the Keter floor/floor of general works. This page is comparable to the Red Mist page in terms of how good it is. The passives of this page are Speed III, Orlando, and The Black silence. Orlando permantely makes sure Roland always has the page equipped no matter what along with his unique combat pages that cannot be swapped out. The Black Silence makes it so at the start of an act he draws two additional pages along with making it so the third page he uses will have all the dices on it gain +2 power. While the passives aren't much the real good part of this page comes from the unique combat pages. The unique pages are Ranga Workshop, Zelkova Workshop, Old Boys Workshop, Allas Workshop, Mook Workshop, Wheels Industry, Crystal Atelier, ATelier Logic, Durandal and lastly Furioso. The low cost pages are Zelkova Workshop, Old Boys Workshop, and Ranga Workshop which cost 0, 1 and 0 respicatively. Zelkova workshop has 2 dices that roll a 4-8 slash dice and a 3-8 blunt dice, the effects of this page are that on use Roland draws 1 page along with the passive effect of not allowing this page's cost to be changed. Old Boys Workshop restores 3 light on use and has 2 dices with a 5-9 Block dice and then a 4-8 blunt dice that on hit restores 5 stagger resist. Ranga Workshop shares the same effect as Zelkova workshp of not allowing the cost to be changed but instead the page has 3 dices all rolling a 3-7 with the first and second dice being pierce while the last one is a slash dice and inflicts 5 bleed(does damage based on bleed stack whenever a dice is rolled and then lessens the stack by a third when it triggers) next scene. Allas Workshop costs 2 light and has the special effect when clashing to lower the target's dice power by 2 and has two pretty decently strong dices starting with a 5-9 pierce dice and then ending with a 5-8 pierce dice. Mook Workshop is a light restoration page along with drawing a page on use, and has a single strong slash dice rolling a 8-15 which on hit does an additional 3 damage to the enemy. Atelier Logic is a ranged page(meaning that in a clash against a melee page it will make the melee dice that won be recycled at the end of the queue of dices) that has 3 dices in total with the first 2 dices being pierce rolling 4-8 to then 5-8 respectively and ending off with a 7-12 blunt dice. Durandal costs 2 light and has two 5-9 rolling slash dices that have the unique effect of giving Roland 1 strength on hit. Crystal Atelier costs 3 light and has 3 dices with the first one being a 8-11 evade dice and the next 2 being 7-11 slash dices, something to note that this page has a 4-8 counter dice as well. Wheels Industry cost 4 light and has 2 dices with the first dice be a 14-24 blunt dice that on hit destroys the target's next dice and then a 5-8 block dice. Lastly, Roland's most strongest page that is only usable once he has used all of his pages at least once and is Furioso, it has one single dice rolling 20-39 and on hit inflicts 5 bleed, 3 bind and 3 fragile next scene and on clash win the dice destroys all of the target's dices that were to be played this turn. Overall, The page of the Black silence has great rolling pages with no even remotely lackluster page.  </p>
         <img src="https://tiphereth.zasz.su/static/assets/books/102.png" alt="Black silence Appearance "/>
         </div>
-        
         <div id="tips">
         <h2> More tips for builds!</h2>
         <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2889235752" target ="_blank">Library of Ruina Builds</a>
