@@ -23,17 +23,29 @@
             #heishou{
                 color: rgb(223, 0, 0);
             }
+            .secretstuff{
+                display:block;
+                color:rgb(106, 0, 255);
+                font-size: 6px;
+            }
             .secretstuff img{
                 opacity: 0;
-                
-            }
-            .secretstuff:hover img{
-                opacity: 1;
-                
             }
             
 
         </style>
+        <script>
+            show="none"
+            function showsecret(){
+                if(show == "none" ){
+                  document.getElementsByClassName("secretstuff").style.opacity="1"
+                  showing="block"
+                 
+                }else{
+                    document.getElementsByClassName("secretstuff").style.opacity ="0"
+                    showing = "none"
+                }}
+        </script>
       
     </head>
     <body> 
@@ -58,7 +70,8 @@
         <img src="https://limbuscompany.wiki.gg/images/thumb/Heishou_Pack_-_You_Branch_Adept_Heathcliff_Full_Uptied.png/498px-Heishou_Pack_-_You_Branch_Adept_Heathcliff_Full_Uptied.png?603bfe" alt="Heishou Pack-You Heathcliff art"/>
         <p>Heishou Pack heathcliff for short, is another really cool Heathcliff identity in  Limbus Company. He comes from the group of the Heishou Pack which are a group based on the animals in the Chinese Zodiac Signs with this Id being based off Roosters. Another important thing to discuss about Heishou Packs are that they are still people relatively human but are given boluses that give them mutations corresponding to the branch they would be apart of, in this case the You branch is given the ability to sprout the wings of a Rooster. This Id inflicts burn, a status that deals damage depedning on it's potency every turn and reduces count when that happens, and also inflicts rupture which deals damage based on potency and reduces count on hit. A reason I like him is mostly due to the prominence of red in this Id in both art and skills, as red is my favorite color after all.</p>
         </div>
-        <div class="secretstuff">
+        <div class="secretstuff" onmouseover={showsecret()}>
+        <p>Text someone will not notice...</p>
         <img src="https://limbuscompany.wiki.gg/images/SC_Heathcliff_Sprite_2.png" alt="Heathcliff with a toy hammer"/>
         
         </div>
